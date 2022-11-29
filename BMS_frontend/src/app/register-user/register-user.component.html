@@ -1,0 +1,75 @@
+<h1>Registration Form</h1>
+<p>Please fill out this form with the required information</p>
+<form action="https://register-demo.freecodecamp.org" (ngSubmit)="userRegister()">
+  <fieldset>
+    <label for="first-name"
+      >Enter Your User Name:
+      <input
+        id="username"
+        name="username"
+        type="text"
+        required
+        [(ngModel)]="user.username"
+      />
+    </label>
+    <label for="email"
+      >Enter Your Email:
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        [(ngModel)]="user.email"
+      />
+    </label>
+    <label for="new-password"
+      >Create a New Password:
+      <input
+        id="new-password"
+        name="new-password"
+        type="password"
+        pattern="[a-z0-5]{8,}"
+        required
+        [(ngModel)]="user.password"
+      />
+    </label>
+  </fieldset>
+  <fieldset>
+    <label for="terms-and-conditions" name="terms-and-conditions">
+      <input
+        id="terms-and-conditions"
+        type="checkbox"
+        required
+        name="terms-and-conditions"
+        class="inline"
+      />
+      I accept the
+      <a href="https://mncartwork.wixsite.com/hello">terms and conditions</a>
+    </label>
+  </fieldset>
+  <fieldset>
+    <label for="profile-picture"
+      >Upload a profile picture:
+      <input id="profile-picture" type="file" name="file" />
+    </label>
+    <label for="age"
+      >Input your age (years):
+      <input id="age" type="number" name="age" min="13" max="120"
+    /></label>
+    <label for="referrer"
+      >How did you hear about us?
+      <select id="referrer" name="referrer">
+        <option value="">(select one)</option>
+        <option value="1">Google</option>
+        <option value="2">Linkedin</option>
+        <option value="3">Newspaper</option>
+        <option value="4">Other</option>
+      </select>
+    </label>
+  </fieldset>
+  <input type="submit" value="Submit" />
+  <p class="w-100 text-center">&mdash; Already a user Sign In &mdash;</p>
+  <div class="social d-flex text-center">
+    <p><a routerLink="../login">Sign In</a></p>
+  </div>
+</form>

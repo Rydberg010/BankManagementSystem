@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  img {
+    border-radius: 58%;
+    max-width: 100%;
+    height: auto;
+  }
+  .image {
+    flex-basis: 70%
+  }
+  .text {
+    font-size: 20px;
+    padding-left: 20px;
+  }
